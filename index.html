@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samawat</title>
+    <link rel="shortcut icon" href="/img/logo/flaticon.svg" type="image/x-icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+
+    <style>
+        .featured__item__text h6 {
+            margin-bottom: 0px;
+        }
+
+        .featured__item__text div {
+            margin: 5px 0;
+        }
+
+        .shipping {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        .shipping h3 {
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .m-auto {
+            margin: 0 auto;
+        }
+
+        .card-head {
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-head img {
+            height: 65px;
+        }
+
+        .header__logo img {
+            max-width: 45%;
+        }
+
+        .footer {
+            background-color: #303030;
+        }
+
+        .footer__about ul li {
+            color: #9f9f9f;
+        }
+
+        .footer__widget ul li a {
+            color: #9f9f9f;
+        }
+
+        .footer__widget p {
+            color: #9f9f9f;
+        }
+
+        .footer__widget h6 {
+            color: #fff;
+        }
+
+        .humberger__open {
+            border: none !important;
+        }
+
+        .section-title h2:after,
+        .featured__controls ul li:after {
+            background: #5a4396;
+        }
+
+        .primary-btn {
+            background: #5a4396;
+        }
+        
+        .header__menu ul li.active a,
+        .hero__text span {
+            color: #5a4396;
+        }
+
+        .header__menu ul li:hover>a {
+            color: #5a4396;
+        }
+
+        .featured__item,
+        .product__discount__item {
+            border: 1px solid #f3f7fb;
+            padding-bottom: 10px;
+        }
+
+        .featured__item__text .price {
+            margin: 5px auto;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        button.owl-dot
+        {
+            height: 15px;
+            width: 15px;
+            background: #EEEEEE !important;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+
+        .owl-dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .h-cart {
+            display: none;
+        }
+
+        .owl-carousel .owl-item img {
+            margin: 10px auto;
+            width: auto;
+        }
+
+        .product__item__pic__hover {
+            background: #5a4396;
+            color: white;
+	        cursor: pointer;
+        }
+
+        .product__item__pic__hover > li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        .col,
+        .col-1, 
+        .col-10, 
+        .col-11, 
+        .col-12, 
+        .col-2, 
+        .col-3, 
+        .col-4, 
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            padding-right: 0px !important;
+        }
+
+        @media (min-width: 768px) { 
+            .hero__item {
+                padding-left: 75px;
+                text-align: left;
+            }
+         }
+
+         @media (min-width: 992px) { 
+            .h-cart {
+                display: block;
+            }
+
+            .categories .owl-nav {
+                display: block !important;
+            }
+         }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo/Untitled-1ds-08.svg" alt=""></a>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>Arabic</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Arabic</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">about us</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@tiiitsuit.com</li>
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> hello@tiiitsuit.com</li>
+                                <li>Free Shipping for all Order of $99</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo/g10.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">about us</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 h-cart">
+                    <div class="header__cart">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="30" height="30" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m1 1c-.55228475 0-1 .44771525-1 1s.44771525 1 1 1h1.7792969a.69367162.69367162 35.784145 0 1 .65808707.47435058l3.2969911 9.8928369c.14641172.43923517.16502704.91215746.05273437 1.3613281l-.27148437 1.0878906c-.39834445 1.5933778.84195876 3.1835938 2.484375 3.1835938h12c.55228475 0 1-.44771525 1-1s-.44771525-1-1-1h-12c-.38938619 0-.6393619-.31950554-.54492188-.69726562l.20473297-.81770594a.64062109.64062109 142.02823 0 1 .6214389-.48502844h10.71875c.43057012.00022511.81295428-.27515444.94921875-.68359375l2.6660156-8c.21596464-.64778704-.26638007-1.3167178-.94921876-1.3164062h-16.111328a.69371294.69371294 35.782526 0 1 -.65811388-.47434165l-.94735487-2.8420646c-.13626447-.40843931-.51864863-.68381886-.94921875-.68359375zm7 19c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2zm12 0c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2z" solid-color="rgb(0,0,0)" font-feature-settings="normal" font-variant-alternates="normal" font-variant-caps="normal" font-variant-east-asian="normal" font-variant-ligatures="normal" font-variant-numeric="normal" font-variant-position="normal" font-variation-settings="normal" inline-size="0" isolation="auto" mix-blend-mode="normal" paint-order="fill markers stroke" shape-margin="0" shape-padding="0" text-decoration-color="rgb(0,0,0)" text-decoration-line="none" text-decoration-style="solid" text-indent="0" text-orientation="mixed" text-transform="none" white-space="normal" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                                    <span>3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+                        <div class="hero__text">
+                            <span>FRUIT FRESH</span>
+                            <h2>Vegetable <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/t-shrit.png">
+                            <h5><a href="#">T shrit</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/box.png">
+                            <h5><a href="#">box</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/cup.png">
+                            <h5><a href="#">cup printing</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="img/categories/business-card.jpg">
+                            <h5><a href="#">business card</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+    <div class="col-12 mt-4">
+        <div class="container">
+            <div class="product__discount">
+                <div class="section-title product__discount__title">
+                    <h2>Sale Off</h2>
+                </div>
+                <div class="row">
+                    <div class="product__discount__slider owl-carousel">
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-1.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-2.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-3.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-4.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-5.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-6.jpg">
+                                    <div class="product__discount__percent">-20%</div>
+                                    <ul class="product__item__pic__hover">
+                                        <li>
+                                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                                            <span>Add to cart</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-7 mt-4">
+        <div class="container">
+            <div class="product__discount">
+                <div class="section-title product__discount__title">
+                    <h2>Sale Off</h2>
+                </div>
+                <div class="row">
+                    <div class="product__discount__slider owl-carousel">
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-1.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-2.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-3.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-4.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-5.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                <div class="product__discount__item__pic set-bg"
+                                    data-setbg="img/product/discount/pd-6.jpg">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__discount__item__text">
+                                    <h5><a href="#">Raisin’n’nuts</a></h5>
+                                    <div>
+                                        <img src="./img/media/rate.svg" alt="">
+                                    </div>
+                                    <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Begin -->
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <img src="img/banner/banner-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner End -->
+    <section class="shipping">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-4 col-mg-b">
+                    <div class="text-center m-50 m-auto">
+                        <div class="card-head">
+                            <img src="./img/media/shipping.svg" alt="">
+                            <h3>FREE SHIPPING</h3>
+                        </div>
+                        <div class="desc mt-3">
+                            <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-mg-b">
+                    <div class="text-center m-50 m-auto">
+                        <div class="card-head">
+                            <img src="./img/media/refund.svg" alt="">
+                            <h3 class="mt-2">100% REFUND</h3>
+                        </div>
+                        <div class="desc mt-3">
+                            <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-mg-b">
+                    <div class="text-center m-50 m-auto">
+                        <div class="card-head">
+                            <img src="./img/media/support.svg" alt="">
+                            <h3>SUPPORT 24/7</h3>
+                        </div>
+                        <div class="desc mt-3">
+                            <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo/Untitled-1ds-08.svg" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@tiiitsuit.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

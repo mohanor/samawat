@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samawat</title>
+    <link rel="shortcut icon" href="/img/logo/flaticon.svg" type="image/x-icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+
+    <style>
+        .slider,
+        *:before,
+        *:after {
+          margin: 0;
+          padding: 0;
+          box-sizing: inherit;
+        }
+        
+        html {
+          box-sizing: border-box;
+        }
+        
+        
+        
+        .container-slider {
+          position: relative;
+          overflow: hidden;
+          border-radius: 5rem;
+        }
+        @media only screen and (max-width: 1000px) {
+          .container-slider {
+            border-radius: 0;
+          }
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+
+        .slider {
+          display: flex;
+          width: 500%;
+          height: 55rem;
+          transition: all 0.25s ease-in;
+          transform: translateX(0);
+        }
+
+        @media only screen and (max-width: 1000px) {
+          .slider {
+            height: 100vh;
+          }
+        }
+
+        .slider .box {
+          height: 100%;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+        }
+
+        @media only screen and (max-width: 650px) {
+          .slider .box {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+          }
+        }
+
+        .slider .box .bg {
+          padding: 2rem;
+          background-color: rgba(0, 0, 0, 0.2);
+          width: 55%;
+          transform: skewX(7deg);
+          position: absolute;
+          height: 100%;
+          left: -10%;
+          padding-left: 20rem;
+          transform-origin: 0 100%;
+        }
+
+        @media only screen and (max-width: 800px) {
+          .slider .box .bg {
+            width: 65%;
+          }
+        }
+
+        @media only screen and (max-width: 650px) {
+          .slider .box .bg {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 54%;
+            transform: skewX(0deg);
+          }
+        }
+
+        .slider .box .bg::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: inherit;
+          pointer-events: none;
+          transform: skewX(10deg);
+        }
+
+        @media only screen and (max-width: 650px) {
+          .slider .box .bg::before {
+            width: 120%;
+            bottom: 0;
+            transform: skewX(0deg);
+          }
+        }
+
+        .slider .box .details {
+          padding: 5rem;
+          padding-left: 10rem;
+          z-index: 100;
+          grid-column: 1/span 1;
+          grid-row: 1/-1;
+        }
+
+        .h2 {
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 650px) {
+          .slider .box .details {
+            grid-row: 2/span 1;
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 2rem;
+            transform: translateY(-9rem);
+          }
+        }
+        .slider .box .details h1 {
+          font-size: 3.5rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+        .slider .box .details p {
+          display: inline-block;
+          font-size: 1.3rem;
+          color: #b5b4b4;
+          margin-bottom: 2rem;
+          margin-right: 5rem;
+        }
+        @media only screen and (max-width: 800px) {
+          .slider .box .details p {
+            margin-right: 0;
+          }
+        }
+        .slider .box .details button {
+          padding: 1rem 3rem;
+          color: #fff;
+          border-radius: 2rem;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .slider .box .details button:hover {
+          opacity: 0.8;
+        }
+        .slider .box .details button:focus {
+          outline: none;
+          border: none;
+        }
+        .slider .box1 {
+          background-color: #500033;
+        }
+        .slider .box1 .illustration .inner {
+          background-color: #ff0077;
+        }
+        .slider .box1 .illustration .inner::after, .slider .box1 .illustration .inner::before {
+          background-color: rgba(255, 0, 119, 0.4);
+        }
+        .slider .box1 button {
+          background-color: #ff0077;
+        }
+        .slider .box2 {
+          background-color: #000050;
+        }
+        .slider .box2 .illustration .inner {
+          background-color: #0033ff;
+        }
+        .slider .box2 .illustration .inner::after, .slider .box2 .illustration .inner::before {
+          background-color: rgba(0, 51, 255, 0.4);
+        }
+        .slider .box2 button {
+          background-color: #0033ff;
+        }
+        .slider .box3 {
+          background-color: #00501d;
+        }
+        .slider .box3 .illustration .inner {
+          background-color: #00ff44;
+        }
+        .slider .box3 .illustration .inner::after, .slider .box3 .illustration .inner::before {
+          background-color: rgba(0, 255, 68, 0.4);
+        }
+        .slider .box3 button {
+          background-color: #00ff44;
+        }
+        .slider .box4 {
+          background-color: #554d00;
+        }
+        .slider .box4 .illustration .inner {
+          background-color: #ff4e00;
+        }
+        .slider .box4 .illustration .inner::after, .slider .box4 .illustration .inner::before {
+          background-color: rgba(255, 78, 0, 0.4);
+        }
+        .slider .box4 button {
+          background-color: #ff4e00;
+        }
+        .slider .box5 {
+          background-color: #300050;
+        }
+        .slider .box5 .illustration .inner {
+          background-color: #8000ff;
+        }
+        .slider .box5 .illustration .inner::after, .slider .box5 .illustration .inner::before {
+          background-color: rgba(128, 0, 255, 0.4);
+        }
+        .slider .box5 button {
+          background-color: #8000ff;
+        }
+        .slider .illustration {
+          grid-column: 2/-1;
+          grid-row: 1/-1;
+          justify-self: center;
+        }
+        @media only screen and (max-width: 650px) {
+          .slider .illustration {
+            grid-row: 1/span 1;
+            grid-column: 1/-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .slider .illustration div {
+          height: 25rem;
+          width: 18rem;
+          border-radius: 3rem;
+          background-color: #ff0077;
+          position: relative;
+          transform: skewX(-10deg);
+        }
+        @media only screen and (max-width: 800px) {
+          .slider .illustration div {
+            height: 20rem;
+            width: 15rem;
+          }
+        }
+        .slider .illustration div::after, .slider .illustration div::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: 3rem;
+          top: 0;
+          left: 0;
+        }
+        .slider .illustration div::after {
+          transform: translate(4rem, -1rem);
+        }
+        .slider .illustration div::before {
+          transform: translate(2rem, -2rem);
+        }
+        
+        .prev,
+        .next,
+        .trail {
+          z-index: 10000;
+          position: absolute;
+        }
+        
+        .prev,
+        .next {
+          width: 4rem;
+          cursor: pointer;
+          opacity: 0.2;
+          transition: all 0.3s ease;
+        }
+        @media only screen and (max-width: 650px) {
+          .prev,
+        .next {
+            display: none;
+          }
+        }
+        .prev:hover,
+        .next:hover {
+          opacity: 1;
+        }
+        
+        .prev {
+          top: 50%;
+          left: 2%;
+          transform: translateY(-50%);
+        }
+        
+        .next {
+          top: 50%;
+          right: 2%;
+          transform: translateY(-50%);
+        }
+        
+        .trail {
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 1rem;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 650px) {
+          .trail {
+            width: 90%;
+            bottom: 13%;
+          }
+        }
+        .trail div {
+          padding: 2rem;
+          border-top: 3px solid #fff;
+          cursor: pointer;
+          opacity: 0.3;
+          transition: all 0.3s ease;
+        }
+        .trail div:hover {
+          opacity: 0.6;
+        }
+        @media only screen and (max-width: 650px) {
+          .trail div {
+            padding: 1rem;
+          }
+        }
+        
+        .active {
+          opacity: 1 !important;
+        }
+        
+    </style>
+</head>
+
+<body id="body">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div class="all-work p-5 text-center" id="all-work" style="display: none;">
+        <div class="container">
+            <div class="close-svg-work">
+                <svg id="close" width="32" height="32" x="0" y="0" viewBox="0 0 311 311.07733" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m16.035156 311.078125c-4.097656 0-8.195312-1.558594-11.308594-4.695313-6.25-6.25-6.25-16.382812 0-22.632812l279.0625-279.0625c6.25-6.25 16.382813-6.25 22.632813 0s6.25 16.382812 0 22.636719l-279.058594 279.058593c-3.136719 3.117188-7.234375 4.695313-11.328125 4.695313zm0 0" fill="#fff" data-original="#fff"></path><path xmlns="http://www.w3.org/2000/svg" d="m295.117188 311.078125c-4.097657 0-8.191407-1.558594-11.308594-4.695313l-279.082032-279.058593c-6.25-6.253907-6.25-16.386719 0-22.636719s16.382813-6.25 22.636719 0l279.058594 279.0625c6.25 6.25 6.25 16.382812 0 22.632812-3.136719 3.117188-7.230469 4.695313-11.304687 4.695313zm0 0" fill="#fff" data-original="#fff"></path></g></svg>
+            </div>
+            <div class="my-4">
+                <h2>our <span>work</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="./img/img-1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="https://images.pexels.com/photos/6976605/pexels-photo-6976605.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="./img/img-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="./img/img-5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="./img/img-1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+                    <div class="position-relative col-item">
+                        <div>
+                            <h3>our work item</h3>
+                        </div>
+                        <img src="./img/img-1.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo/Untitled-1ds-08.svg" alt=""></a>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>Arabic</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Arabic</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./our-work.html">our work</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@tiiitsuit.com</li>
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> hello@tiiitsuit.com</li>
+                                <li>Free Shipping for all Order of $99</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="img/language.png" alt="">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo/g10.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./our-work.html">Our work</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 h-cart">
+                    <div class="header__cart">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="30" height="30" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m1 1c-.55228475 0-1 .44771525-1 1s.44771525 1 1 1h1.7792969a.69367162.69367162 35.784145 0 1 .65808707.47435058l3.2969911 9.8928369c.14641172.43923517.16502704.91215746.05273437 1.3613281l-.27148437 1.0878906c-.39834445 1.5933778.84195876 3.1835938 2.484375 3.1835938h12c.55228475 0 1-.44771525 1-1s-.44771525-1-1-1h-12c-.38938619 0-.6393619-.31950554-.54492188-.69726562l.20473297-.81770594a.64062109.64062109 142.02823 0 1 .6214389-.48502844h10.71875c.43057012.00022511.81295428-.27515444.94921875-.68359375l2.6660156-8c.21596464-.64778704-.26638007-1.3167178-.94921876-1.3164062h-16.111328a.69371294.69371294 35.782526 0 1 -.65811388-.47434165l-.94735487-2.8420646c-.13626447-.40843931-.51864863-.68381886-.94921875-.68359375zm7 19c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2zm12 0c-1.1045695 0-2 .8954305-2 2s.8954305 2 2 2 2-.8954305 2-2-.8954305-2-2-2z" solid-color="rgb(0,0,0)" font-feature-settings="normal" font-variant-alternates="normal" font-variant-caps="normal" font-variant-east-asian="normal" font-variant-ligatures="normal" font-variant-numeric="normal" font-variant-position="normal" font-variation-settings="normal" inline-size="0" isolation="auto" mix-blend-mode="normal" paint-order="fill markers stroke" shape-margin="0" shape-padding="0" text-decoration-color="rgb(0,0,0)" text-decoration-line="none" text-decoration-style="solid" text-indent="0" text-orientation="mixed" text-transform="none" white-space="normal" fill="#000000" data-original="#000000" class=""></path></g></svg>
+                                    <span>3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="h-c">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero__item set-bg" data-setbg="img/webapp-cockpit-01-3000px-3.jpeg">
+                            <div class="container" style="height: 100%;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="creative-service">
+                                            <div></div>
+                                            <div class="hero__text">
+                                                <h2 class="h2-title">CREATIVE <br>SERVICE</h2>
+                                                <p>
+                                                    Our webapp is a closed order environment in which you order print,
+                                                    sign, large format, textile and giveaways in two steps. First class,
+                                                    without extra charge.
+                                                </p>
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 position-relative">
+                                        <div class="logo-to-border position-absolute">
+                                            <img src="./img/g10.png" alt=".">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <section class="my-5">
+        <div class="con-box p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-5 col-pad">
+                        <div class="d-flex flex-column justify-content-between align-items-center" style="height: 100%;">
+                            <div></div>
+                            <div>
+                                <div class="mb-3">
+                                    <span class="rules">
+                                        ‘our services’
+                                    </span>
+                                </div>
+                                <div class="w-75">
+                                    <ol>
+                                        <li class="mb-2">
+                                            Professionals who regularly order printed material.
+                                        </li>
+                                        <li  class="mb-2">
+                                            Designers, in-house marketers, resellers and printers.
+                                        </li>
+                                        <li>
+                                            People who speak fluent ‘print’ and know exactly what they need.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-7 col-pad">
+                        <div>
+                            <div class="mb-4">
+                                <h2 class="mb-3">
+                                    Your first class advantages
+                                </h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit id perferendis
+                                    doloremque voluptatibus dignissimos repellendus quaerat cum beatae officiis quis deserunt 
+                                </p>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-6 mb-3 col-pad">
+                                            <a class="item item-1" href="#">
+                                                <div>
+                                                    <h3 class="mb-2">
+                                                        print
+                                                    </h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    </p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <img src="./img/next.png" alt="next" class="next-service">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-6 mb-3 col-pad">
+                                            <a class="item item-2" href="#">
+                                                <div>
+                                                    <h3 class="mb-2">
+                                                        logo design
+                                                    </h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    </p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <img src="./img/next.png" alt="next" class="next-service">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-6 mb-3 col-pad">
+                                            <a class="item item-3" href="#">
+                                                <div>
+                                                    <h3 class="mb-2">
+                                                        GRAPHIC DESIGN
+                                                    </h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    </p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <img src="./img/next.png" alt="next" class="next-service">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-6 mb-3 col-pad">
+                                            <a class="item item-4" href="#">
+                                                <div>
+                                                    <h3 class="mb-2">
+                                                        web developement
+                                                    </h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    </p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <img src="./img/next.png" alt="next" class="next-service">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customers">
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-5 col-left-cust">
+                    <div class="customers-left">
+                         <div>
+                             <h3 class="mb-3">What our customers are saying?</h3>
+                             <p>
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga autem aliquid quasi itaque exercitationem eaque ut tenetur
+                             </p>
+                         </div>
+                         <div>
+                             <ul class="d-flex list-of-arrows">
+                                 <li class="prev-arrow mr-2">
+                                     <svg class="svg-arrow" width="35" height="35" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" id="Down_Arrow_3_" d="m64 88c-1.023 0-2.047-.391-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l37.172 37.172 37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40c-.781.781-1.805 1.172-2.828 1.172z"></path></g></svg>
+                                 </li>
+                                 <li class="next-arrow">
+                                     <svg class="svg-arrow" width="35" height="35" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" id="Down_Arrow_3_" d="m64 88c-1.023 0-2.047-.391-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656s4.094-1.563 5.656 0l37.172 37.172 37.172-37.172c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-40 40c-.781.781-1.805 1.172-2.828 1.172z"></path></g></svg>
+                                 </li>
+                             </ul>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-7">
+                    <div class="single-item">
+                        <div class="customers-right position-relative">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    <img src="img/testimonial-3.jpeg" class="mx-auto" alt="">
+                                </div>
+                                <div class="mb-3">
+                                    <img src="/img/media/rate.svg" class="mx-auto" alt="">
+                                </div>
+                                <div class="mb-3">
+                                    <h3>Timothy Andy</h3>
+                                </div>
+                                <div>
+                                    <p>
+                                        Duis sed erat nisl. Sed justo tortor, ultricies vel ultrices ut, imperdiet sit amet arcu. Integer suscipit, eros et sollicitudin tincidunt, est tortor pellentesque ante luctus mauris massa sit amet magna.
+                                    </p>
+                                </div>
+                                <div class="quote">
+                                    <img src="img/fa-solid_quote-left.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customers-right position-relative">
+                            <div class="text-center">
+                                <div class="mb-3">
+                                    <img src="img/testimonial-3.jpeg" class="mx-auto" alt="">
+                                </div>
+                                <div class="mb-3">
+                                    <img src="/img/media/rate.svg" class="mx-auto" alt="">
+                                </div>
+                                <div class="mb-3">
+                                    <h3>Timothy Andy</h3>
+                                </div>
+                                <div>
+                                    <p>
+                                        Duis sed erat nisl. Sed justo tortor, ultricies vel ultrices ut, imperdiet sit amet arcu. Integer suscipit, eros et sollicitudin tincidunt, est tortor pellentesque ante luctus mauris massa sit amet magna.
+                                    </p>
+                                </div>
+                                <div class="quote">
+                                    <img src="img/fa-solid_quote-left.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </section>
+    <!-- Banner End -->
+
+    <section class="container our-work">
+        <div class="mb-3 our-work-head">
+            <h2>our work</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga autem aliquid quasi itaque exercitationem eaque ut tenetur
+            </p>
+        </div>
+        <div>
+            <div class="row img-grid">
+                <div class="col-sm-12 col-md-6 mobile-mb-3">
+                    <div class="position-relative" style="height: 100%;">
+                        <img src="/img/img-4.jpg" alt="">
+                        <h6>Business Card</h6>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="two-div-owr-work">
+                        <div class="mb-3 position-relative">
+                            <img src="/img/img-2.jpeg" alt="">
+                            <h6>Business Card</h6>
+                        </div>
+                        <div>
+                            <div class="cont-bottom-img">
+                                <div class="mr-3 position-relative">
+                                    <img src="/img/img-3.jpg" alt="">
+                                    <h6>Business Card</h6>
+                                </div>
+                                <div class="position-relative">
+                                    <img src="/img/img-1.jpeg" alt="">
+                                    <h6>Business Card</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center my-5">
+            <button class="show-more" id="open">show more</button>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div class="container" style="padding: 30px;">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6" style="background-color: #fff;">
+                    <div class="px-5">
+                        <h2>Get in touch with us</h2>
+                    </div>
+                    <div class="bg-map">
+                        <div class="p-5">
+                            <form action="#">
+                                <div class="d-flex">
+                                    <div class="w-100">
+                                        <label for="">Your name *</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="w-100 ml-2">
+                                        <label for="">Your email *</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="">Subject</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Message</label>
+                                    <textarea name="" id="" cols="30" rows="6"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="send-msg">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 pl-0 iframe-div">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.592390763073!2d-7.591943348563529!3d33.5899309806397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd6b206a73a3%3A0xe2d967c08730d045!2sCasa%20Voyageurs!5e0!3m2!1sen!2sma!4v1642689075514!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo/g10-white.svg" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@tiiitsuit.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Delivery infomation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Our Sitemap</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Innovation</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="footer__widget">
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".single-item").slick({
+            prevArrow: $('.prev-arrow'),
+            nextArrow: $('.next-arrow')
+        });
+    </script>
+    <script>
+        const allWork = document.getElementById('all-work');
+        const open = document.getElementById('open');
+        const close = document.getElementById('close');
+        const body = document.getElementById('body');
+        open.addEventListener('click', ()=> {
+            allWork.style.display = "block"
+            body.style.overflow = "hidden"
+        })
+
+        close.addEventListener('click', ()=> {
+            allWork.style.display = "none"
+            body.style.overflow = "auto"
+        })
+    </script>
+</body>
+
+</html>

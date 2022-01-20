@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    ul li {
+      padding: 10px 15px;
+      font-size: 30px;
+    }
+
+    .active {
+      color: blue;
+    }
+
+    ul li:hover {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="item ">home</li>
+    <li class="item active">text 1</li>
+    <li class="item">text 2</li>
+  </ul>
+
+  <script>
+    const items = document.getElementsByClassName('item');
+
+    for(let i = 0; items.length; i++)
+    {
+      items[i].addEventListener('click', ()=> {
+
+        for(let j = 0; j < items.length; j++)
+        {
+          items[j].classList.remove("active"); 
+        }
+       
+        items[i].classList.add("active");
+
+      })
+    }
+  </script>
+</body>
+</html>
