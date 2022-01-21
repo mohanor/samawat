@@ -133,6 +133,17 @@ input {
     font-size: 14px;
 }
 
+.btn-success {
+    background-color: #0d59ab;
+    border-color: #0d59ab;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #115196;
+    border-color: #0d59ab;
+}
+
 @media (min-width: 1200px) {
     .main-div {
         display: flex;
