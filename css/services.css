@@ -228,7 +228,6 @@ button.owl-dot
 
 .flex-parent {
     flex-direction: column;
-    text-align: center;
     justify-content: space-between;
     height: 100%;
     padding: 60px 25px;
@@ -261,8 +260,8 @@ button.owl-dot
     bottom: 30px;
     right: 0;
     background-color: white;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -290,7 +289,7 @@ button.owl-dot
 
 .hero__text p {
     font-size: min(6vw, 23px);
-    line-height: 2.8rem;
+    line-height: 2rem;
     color: #fff;
 }
 
@@ -672,7 +671,8 @@ ol li::marker {
     }
 
     .desk-p-5 {
-        padding: 1rem!important;
+        padding-top: 2rem!important;
+        padding-bottom: 2rem!important;
     }
 
     .font-15px {
@@ -702,14 +702,27 @@ ol li::marker {
 
     @media (min-width: 768px) {
 
+
         .hero {
             background-size: contain;
             background-position: right;
         }
 
+        .logo-to-border {
+            height: 100px;
+            width: 100px;
+        }
+
+        .hero__text p {
+            line-height: 2.8rem;
+        }
+
         .p-l-r {
-            padding-right: 15px;
             padding-left: 15px;
+        }
+
+        .p-l0 {
+            padding-left: 0px;
         }
 
     .m-px-5 {
